@@ -1,0 +1,17 @@
+class NegativeAgeError(Exception):
+     pass
+
+age = int(input("What is your age?  "))
+
+if age <= 0:
+     raise NegativeAgeError('Age Cannot be less thna or equal to 0')
+
+if age >= 18:
+     print("You are allowed to watch it")
+     exit()
+elif age > 0 and age < 18:
+     answer = input(("Are your parents with you Y or N?  "))
+     if answer == "Y" or "y":
+          print("You are allowed to watch it")
+     else:
+          print("You are not allowed to watch")
